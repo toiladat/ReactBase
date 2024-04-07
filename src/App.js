@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Data from './Data/Data.json'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Task from './components/Task/index';
+import AddTask from './components/AddTask/index';
+import { useState } from 'react';
 
 function App() {
+  const [data,setData]=useState(Data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='Task'>
+        <header>
+          <h2>TaskList</h2>
+          <AddTask data={data} setData={setData}/>
+        </header>
+        {
+          // () trong map la return ve gia tri trong()
+          //{} trong map phai dung return
+          data.map((item)=>(
+            <Task item={item} key={item.id}/>
+          ))
+        }
+      </div>
+    </>
   );
 }
 

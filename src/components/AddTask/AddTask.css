@@ -1,0 +1,133 @@
+.addTask {
+  background: #713fff;
+  box-shadow: 0px 6px 12px rgba(113, 63, 255, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 13px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 14px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.modal {
+  padding: 100px 30px;
+  background-color: transparent;
+}
+
+h3 {
+  padding-top: 30px;
+  padding-left: 20px;
+  color: #121212;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+label {
+  padding-left: 20px;
+  color: #7d8592;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 0px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  background: #fff;
+  border: 1px solid #d8e0f0;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(184, 200, 224, 0.222);
+  font-weight: 400;
+  outline: none;
+
+  width: 95%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin-right: 70px;
+  padding: 7px 10px;
+  border: 1px solid #ffbd21;
+  border-radius: 10px;
+  color: #ffbd21;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: 90px;
+}
+
+.high {
+  border: 1px solid #f73446;
+  color: #f73446;
+}
+.high-selected {
+  background-color: #f73446;
+  color: #fff;
+}
+.medium {
+  border: 1px solid #ffbd21;
+  color: #ffbd21;
+}
+.medium-selected{
+  color: #fff;
+  background-color: #ffbd21;
+}
+.low {
+  border: 1px solid #0ac947;
+  color: #0ac947;
+}
+
+.low-selected{
+  color: #fff;
+  background-color: #0ac947;
+}
+.addButton{
+  background: #713fff;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(113,63,255,.25);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  padding: 13px 30px;
+  width: 100px;
+  margin: 20px 0px;
+  margin-left: 350px;
+}
+.addButton-disable{
+  background: #713fff;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(113,63,255,.25);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  padding: 13px 30px;
+  width: 100px;
+  margin: 20px 0px;
+  margin-left: 350px;
+
+  opacity: 0.5; 
+  pointer-events: none;
+  cursor: not-allowed;
+}

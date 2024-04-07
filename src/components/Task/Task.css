@@ -1,0 +1,65 @@
+.taskList{
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    align-items: center;
+    
+}
+.taskTitle ,.taskPri{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #91929e;
+}
+.taskContent ,.taskLevel{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #0a1629;
+}
+.proceButton{
+    background: rgba(125, 133, 146, 0.14);
+    border-radius: 8px;
+    padding: 7px 14px;
+    color: #7d8592;
+    font-weight: 700;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.updateButton{
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.deleteButton{
+    color: rgb(254, 47, 47);
+    font-size: 30px;
+    cursor: pointer;
+}
+.taskLevel-low{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #0ac947;
+}
+.taskLevel-medium{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #ffbd21;
+}
+.taskLevel-high{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #f73446;
+}
