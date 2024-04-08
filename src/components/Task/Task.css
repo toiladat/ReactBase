@@ -35,15 +35,21 @@ span{
     cursor: pointer;
 }
 .updateButton{
-    color: #000;
+    color: #6e6262;
     font-size: 30px;
     cursor: pointer;
-
+    transition: all 0.4;
+}
+.updateButton:hover{
+    color: #000;
 }
 .deleteButton{
-    color: rgb(254, 47, 47);
+    color: rgb(225, 104, 104);
     font-size: 30px;
     cursor: pointer;
+}
+.deleteButton:hover{
+    color: rgb(220, 12, 12);
 }
 .taskLevel-low{
     font-size: 14px;

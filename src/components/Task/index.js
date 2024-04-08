@@ -1,8 +1,9 @@
 import "./Task.css";
-import { FaListUl } from "react-icons/fa";
-import DeleteTask from "../DeleteTask/index"
+import DeleteTask from "../DeleteTask/index";
+import EditTask from "../AddEditTask/EditTask";
+
 function Task(props) {
-  const { item } = props;  
+  const { item , data, setData } = props;  
   return (
     <>
       <div className="taskList">
@@ -15,8 +16,9 @@ function Task(props) {
           <span className={`taskLevel-${item.priority}`}>{item.priority}</span>
         </div>
         <button className="proceButton">{item.status}</button>
-        <FaListUl className="updateButton" />
-        <DeleteTask/>
+
+        <EditTask data={data} setData={setData} target={"Edit"} item={item}/>
+        <DeleteTask data={data} setData={setData} taskId={item.id}/>
       </div>
     </>
   );
