@@ -23,12 +23,28 @@ function AddEditTaskForm(props) {
 
 
   // gán giá trị pri mặc định và set giá trị khi click
+ 
+
   const handleClick = (priority) => {
     setNewPri(priority);
   };
 
   // setNewTitle khi user nhap
+
+
+  // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // setIsValid(regex.test(value));
+
+
+  // const str = "your string here";
+  // const isValid = /^.{1,20}$/.test(str);
+  // console.log(isValid); // true nếu chuỗi không vượt quá 20 ký tự, ngược lại là false
+
+  const [isValid,setIsValid]=useState(false);
+  const regex=/^.{1,20}$/;
+
   const onChangeAddTask = (e) => {
+    setIsValid(regex.test(e.currentTarget.value));
     setNewTitle(e.currentTarget.value);
   };
 
@@ -60,9 +76,9 @@ function AddEditTaskForm(props) {
 
   const editTask=()=>{
     let index= data.findIndex((item)=>(item.id===editedItem.id));
-    const dataCoppy=[...data]
+    const dataCoppy=[...data];
     dataCoppy[index]={
-        id: `${editedItem.id}`,
+        id: editedItem.id,
         title: newTitle,
         priority: newPri,
         status: newStatus,
@@ -102,8 +118,8 @@ function AddEditTaskForm(props) {
           ))}
         </ul>
         <button
-          className={`addButton${!newTitle ? "-disable" : ""}`}
-          disabled={!newTitle}
+          className={`addButton${!newTitle||!isValid ? "-disable" : ""}`}
+          disabled={!newTitle||!isValid}
           onClick={() => {
             addEditHandle();
           }}
