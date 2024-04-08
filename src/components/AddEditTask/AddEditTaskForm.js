@@ -7,14 +7,11 @@ function AddEditTaskForm(props) {
 
 //   console.log(target);
 
-    const addEditHandle= (e)=>{
+    const addEditHandle= ()=>{
         target==="Add"?  addTask (): editTask();
         handleClose();
     }
 
-    
-
- 
   //khởi tạo 1 task mới phụ thuộc vào thêm hay sửa
   
  const [newId, setNewId] = useState(editedItem?`${editedItem.id}`:'');
@@ -22,9 +19,9 @@ function AddEditTaskForm(props) {
  const [newPri, setNewPri] = useState(editedItem?`${editedItem.priority}`:'low');
  const [newStatus, setNewStatus] = useState(editedItem?`${editedItem.status}`:'to do');
  const [newProgress, setNewProgress] = useState(editedItem?`${editedItem.progress}`:'0');
-console.log(editedItem);
+ console.log(editedItem);
 
- 
+
   // gán giá trị pri mặc định và set giá trị khi click
   const handleClick = (priority) => {
     setNewPri(priority);
@@ -50,14 +47,14 @@ console.log(editedItem);
     };
     // thêm task
 
-   
+  
     setData([newTask, ...data]);
 
     //reset form để không lấy val cũ
     setNewId("");
     setNewTitle("");
     setNewPri("low");
-    setNewStatus("to do");
+    setNewStatus("To Do");
     setNewProgress(0);
   };
 
